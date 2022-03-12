@@ -28,6 +28,8 @@ class DoctorListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        activity?.title = "Doctor App"
+
         doctorListViewModel.testData()
         binding.btnDoc1.text =doctorListViewModel.doctorList[0].name
         binding.btnDoc2.text =doctorListViewModel.doctorList[1].name
