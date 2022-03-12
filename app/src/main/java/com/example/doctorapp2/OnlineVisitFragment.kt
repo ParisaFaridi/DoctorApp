@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.doctorapp2.databinding.FragmentOnlineVisitBinding
 
 class OnlineVisitFragment : Fragment() {
@@ -15,6 +16,8 @@ class OnlineVisitFragment : Fragment() {
     private val consultancyViewModel :ConsultancyViewModel by viewModels()
     private var _binding: FragmentOnlineVisitBinding? = null
     private val binding get() = _binding!!
+
+    private val args: OnlineVisitFragmentArgs by navArgs()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -41,6 +44,7 @@ class OnlineVisitFragment : Fragment() {
         binding.llThirdOption.setOnClickListener { goToUserInfoFragment() }
     }
     private fun goToUserInfoFragment(){
-        findNavController().navigate(R.id.action_onlineVisitFragment_to_userInfoFragment)
+        findNavController().navigate(OnlineVisitFragmentDirections
+            .actionOnlineVisitFragmentToUserInfoFragment(args.docName))
     }
 }

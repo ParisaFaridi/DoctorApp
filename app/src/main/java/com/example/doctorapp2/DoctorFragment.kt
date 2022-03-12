@@ -42,8 +42,8 @@ class DoctorFragment : Fragment() {
         activity?.title = doctorViewModel.doctorList[id].name
 
         binding.tvOnlineVisit.setOnClickListener {
-            findNavController().navigate(R.id.action_doctorFragment_to_onlineVisitFragment)
+            findNavController().navigate(DoctorFragmentDirections.actionDoctorFragmentToOnlineVisitFragment(
+                doctorViewModel.doctorList[id].name))
         }
-
     }
 }
