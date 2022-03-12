@@ -22,5 +22,22 @@
         <argument
             android:name="doc_id"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_doctorFragment_to_onlineVisitFragment"
+            app:destination="@id/onlineVisitFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/onlineVisitFragment"
+        android:name="com.example.doctorapp2.OnlineVisitFragment"
+        android:label="fragment_online_visit"
+        tools:layout="@layout/fragment_online_visit" >
+        <action
+            android:id="@+id/action_onlineVisitFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.example.doctorapp2.UserInfoFragment"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" />
 </navigation>
