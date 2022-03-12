@@ -34,10 +34,13 @@ class DoctorListFragment : Fragment() {
         binding.btnDoc3.text =doctorListViewModel.doctorList[2].name
 
         binding.apply {
-            btnDoc1.setOnClickListener { findNavController().navigate(R.id.action_doctorListFragment_to_doctorFragment) }
-            btnDoc2.setOnClickListener {  findNavController().navigate(R.id.action_doctorListFragment_to_doctorFragment) }
-            btnDoc3.setOnClickListener {  findNavController().navigate(R.id.action_doctorListFragment_to_doctorFragment) }
+            btnDoc1.setOnClickListener {navigateToSecondFragment(0)}
+            btnDoc2.setOnClickListener {navigateToSecondFragment(1)}
+            btnDoc3.setOnClickListener {navigateToSecondFragment(2)}
         }
-
+    }
+    fun navigateToSecondFragment(id:Int){
+        findNavController().navigate(DoctorListFragmentDirections
+            .actionDoctorListFragmentToDoctorFragment(id))
     }
 }

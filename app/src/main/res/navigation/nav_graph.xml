@@ -18,5 +18,9 @@
         android:id="@+id/doctorFragment"
         android:name="com.example.doctorapp2.DoctorFragment"
         android:label="fragment_doctor"
-        tools:layout="@layout/fragment_doctor" />
+        tools:layout="@layout/fragment_doctor" >
+        <argument
+            android:name="doc_id"
+            app:argType="integer" />
+    </fragment>
 </navigation>
