@@ -9,7 +9,11 @@
         android:id="@+id/doctorListFragment"
         android:name="com.example.doctorapp2.DoctorListFragment"
         android:label="fragment_doctor_list"
-        tools:layout="@layout/fragment_doctor_list" />
+        tools:layout="@layout/fragment_doctor_list" >
+        <action
+            android:id="@+id/action_doctorListFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+    </fragment>
     <fragment
         android:id="@+id/doctorFragment"
         android:name="com.example.doctorapp2.DoctorFragment"
