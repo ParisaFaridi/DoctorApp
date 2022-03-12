@@ -13,7 +13,7 @@ class DoctorViewModel:ViewModel() {
         val doc2=Doctor("محمد صادقیان",1,"تهران","ارتوپد",
             "66889925",Status.Online)
         val doc3=Doctor("زهرا حسینی",2,"تهران","روان پزشک",
-            "22123456",Status.Online)
+            "22123456",Status.Offline)
 
         doctorList.add(doc1)
         doctorList.add(doc2)
