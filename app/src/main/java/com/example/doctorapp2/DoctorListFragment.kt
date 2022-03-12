@@ -11,7 +11,7 @@ import com.example.doctorapp2.databinding.FragmentDoctorListBinding
 
 class DoctorListFragment : Fragment() {
 
-    private val doctorListViewModel: DoctorNameViewModel by viewModels()
+    private val doctorViewModel: DoctorViewModel by viewModels()
 
     private var _binding: FragmentDoctorListBinding? = null
     private val binding get() = _binding!!
@@ -30,10 +30,10 @@ class DoctorListFragment : Fragment() {
 
         activity?.title = "Doctor App"
 
-        doctorListViewModel.testData()
-        binding.btnDoc1.text =doctorListViewModel.doctorList[0].name
-        binding.btnDoc2.text =doctorListViewModel.doctorList[1].name
-        binding.btnDoc3.text =doctorListViewModel.doctorList[2].name
+        doctorViewModel.testData()
+        binding.btnDoc1.text =doctorViewModel.doctorList[0].name
+        binding.btnDoc2.text =doctorViewModel.doctorList[1].name
+        binding.btnDoc3.text =doctorViewModel.doctorList[2].name
 
         binding.apply {
             btnDoc1.setOnClickListener {navigateToSecondFragment(0)}
