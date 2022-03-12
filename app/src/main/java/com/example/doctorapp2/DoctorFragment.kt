@@ -1,5 +1,7 @@
 package com.example.doctorapp2
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -49,6 +51,12 @@ class DoctorFragment : Fragment() {
             }
             findNavController().navigate(DoctorFragmentDirections.actionDoctorFragmentToOnlineVisitFragment(
                 doctorViewModel.doctorList[id].name))
+        }
+
+        binding.btnCall.setOnClickListener {
+                val callIntent = Intent(Intent.ACTION_DIAL)
+                callIntent.data = Uri.parse("tel:${doctorViewModel.doctorList[id].phone}")
+                startActivity(callIntent)
         }
     }
 }

@@ -130,7 +130,7 @@
                     tools:ignore="ButtonStyle" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/btn_call"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#00695C"
