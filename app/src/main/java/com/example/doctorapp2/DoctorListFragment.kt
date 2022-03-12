@@ -39,7 +39,7 @@ class DoctorListFragment : Fragment() {
             btnDoc3.setOnClickListener {navigateToSecondFragment(2)}
         }
     }
-    fun navigateToSecondFragment(id:Int){
+    private fun navigateToSecondFragment(id:Int){
         findNavController().navigate(DoctorListFragmentDirections
             .actionDoctorListFragmentToDoctorFragment(id))
     }
