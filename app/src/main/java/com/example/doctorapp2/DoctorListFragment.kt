@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.doctorapp2.databinding.FragmentDoctorListBinding
 
 class DoctorListFragment : Fragment() {
@@ -31,6 +32,12 @@ class DoctorListFragment : Fragment() {
         binding.btnDoc1.text =doctorListViewModel.doctorList[0].name
         binding.btnDoc2.text =doctorListViewModel.doctorList[1].name
         binding.btnDoc3.text =doctorListViewModel.doctorList[2].name
+
+        binding.apply {
+            btnDoc1.setOnClickListener { findNavController().navigate(R.id.action_doctorListFragment_to_doctorFragment) }
+            btnDoc2.setOnClickListener {  findNavController().navigate(R.id.action_doctorListFragment_to_doctorFragment) }
+            btnDoc3.setOnClickListener {  findNavController().navigate(R.id.action_doctorListFragment_to_doctorFragment) }
+        }
 
     }
 }
