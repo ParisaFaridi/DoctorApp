@@ -23,4 +23,5 @@
     <string name="question3">آیا شما بالای 18 سال سن دارید؟</string>
     <string name="question2">آیا این تماس اورژانسی است؟</string>
     <string name="question1">آیا هم اکنون آمادگی صحبت با دکتر را دارید؟</string>
+    <string name="patient_name">نام</string>
 </resources>
