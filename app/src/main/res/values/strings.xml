@@ -14,4 +14,7 @@
     <string name="online_visit">ویزیت آنلاین</string>
     <string name="send_message">ارسال پیام</string>
     <string name="call">تماس</string>
+    <string name="chooseConsultancy">مدل مشاوره را انتخاب کنید:</string>
+    <string name="_3000000">3000000</string>
+    <string name="_30_minute">30 minute</string>
 </resources>
