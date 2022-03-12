@@ -26,17 +26,28 @@ class UserInfoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (ANSWERED){
+            binding.tvDoctorWillCallYou.visibility = View.VISIBLE
+        }
+
         val docName = args.docName
         (" دکتر $docName با شما تماس خواهد گرفت").also { binding.tvDoctorWillCallYou.text = it }
         binding.btnCallMeDoc.setOnClickListener {
             if (isNotValid()) {
-                binding.etPatientName.error ="پر کردن این فیلد الزامی است"
-                binding.etPatientPhone.error ="پر کردن این فیلد الزامی است"
+                setErrors()
                 return@setOnClickListener
             }
             findNavController().navigate(R.id.action_userInfoFragment_to_checkPatientFragment)
         }
     }
+
+    private fun setErrors() {
+        if (binding.etPatientName.text.isNullOrBlank())
+            binding.etPatientName.error = "پر کردن این فیلد الزامی است"
+        if(binding.etPatientPhone.text.isNullOrBlank())
+            binding.etPatientPhone.error = "پر کردن این فیلد الزامی است"
+    }
+
     private fun isNotValid(): Boolean {
         return (binding.etPatientName.text.isNullOrBlank() || binding.etPatientPhone.text.isNullOrBlank() )
     }
