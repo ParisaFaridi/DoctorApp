@@ -10,14 +10,14 @@ import com.example.doctorapp2.databinding.FragmentDoctorListBinding
 
 class DoctorListFragment : Fragment() {
 
-    val doctorListViewModel: DoctorNameViewModel by viewModels()
+    private val doctorListViewModel: DoctorNameViewModel by viewModels()
 
     private var _binding: FragmentDoctorListBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
+        savedInstanceState: Bundle?): View {
 
         _binding = FragmentDoctorListBinding.inflate(inflater, container, false)
         return  binding.root
