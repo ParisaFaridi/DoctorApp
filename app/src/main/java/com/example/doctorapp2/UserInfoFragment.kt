@@ -28,6 +28,7 @@ class UserInfoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         if (ANSWERED){
             binding.tvDoctorWillCallYou.visibility = View.VISIBLE
+            disableEditTexts()
         }
 
         val docName = args.docName
@@ -50,6 +51,19 @@ class UserInfoFragment : Fragment() {
 
     private fun isNotValid(): Boolean {
         return (binding.etPatientName.text.isNullOrBlank() || binding.etPatientPhone.text.isNullOrBlank() )
+    }
+    private fun disableEditTexts(){
+        binding.apply {
+            etPatientName.isClickable = false
+            etPatientName.isCursorVisible = false
+            etPatientName.isFocusable = false
+            etPatientName.isFocusableInTouchMode = false
+
+            etPatientPhone.isClickable = false
+            etPatientPhone.isCursorVisible = false
+            etPatientPhone.isFocusable = false
+            etPatientPhone.isFocusableInTouchMode = false
+        }
     }
 
 }
