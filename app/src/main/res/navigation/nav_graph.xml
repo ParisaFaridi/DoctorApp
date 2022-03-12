@@ -34,10 +34,25 @@
         <action
             android:id="@+id/action_onlineVisitFragment_to_userInfoFragment"
             app:destination="@id/userInfoFragment" />
+        <argument
+            android:name="doc_name"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/userInfoFragment"
         android:name="com.example.doctorapp2.UserInfoFragment"
         android:label="fragment_user_info"
-        tools:layout="@layout/fragment_user_info" />
+        tools:layout="@layout/fragment_user_info" >
+        <argument
+            android:name="doc_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_userInfoFragment_to_checkPatientFragment"
+            app:destination="@id/checkPatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkPatientFragment"
+        android:name="com.example.doctorapp2.CheckPatientFragment"
+        android:label="fragment_check_patient"
+        tools:layout="@layout/fragment_check_patient" />
 </navigation>
