@@ -7,9 +7,8 @@
     android:orientation="vertical"
     android:padding="40dp">
 
-
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -41,6 +40,7 @@
         android:textSize="16sp"/>
 
     <Button
+        android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/submit"
