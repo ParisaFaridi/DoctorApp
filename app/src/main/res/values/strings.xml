@@ -12,4 +12,6 @@
     <string name="home_consultation">مشاوره در منزل</string>
     <string name="book_an_appointment">نوبت دهی</string>
     <string name="online_visit">ویزیت آنلاین</string>
+    <string name="send_message">ارسال پیام</string>
+    <string name="call">تماس</string>
 </resources>
