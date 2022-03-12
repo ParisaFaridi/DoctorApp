@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:strokeColor="@color/purple_200"
-        app:strokeWidth="2dp"
+        app:strokeWidth="3dp"
         app:cardCornerRadius="30dp"
         android:layout_marginBottom="30dp">
         <LinearLayout
@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:strokeColor="@color/purple_200"
-        app:strokeWidth="2dp"
+        app:strokeWidth="3dp"
         app:cardCornerRadius="30dp"
         android:layout_marginBottom="30dp">
         <LinearLayout
@@ -87,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:strokeColor="@color/purple_200"
-        app:strokeWidth="2dp"
+        app:strokeWidth="3dp"
         app:cardCornerRadius="30dp"
         android:layout_marginBottom="30dp">
         <LinearLayout
