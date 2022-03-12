@@ -1,14 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DoctorFragment">
+    tools:context=".DoctorFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/DoctorInfoCArdView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/purple_200"
+        app:cardCornerRadius="15dp">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="146dp"
+                android:layout_height="166dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="7dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.56">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/name"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="189dp"
+                    tools:layout_editor_absoluteY="34dp" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/city"
+                    android:textSize="25sp"
+                    tools:layout_editor_absoluteX="202dp"
+                    tools:layout_editor_absoluteY="125dp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/phone"
+                    android:textSize="25sp"
+                    tools:layout_editor_absoluteX="185dp"
+                    tools:layout_editor_absoluteY="93dp" />
+
+                <TextView
+                    android:id="@+id/tv_profession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/profession"
+                    android:textSize="25sp"
+                    tools:layout_editor_absoluteX="157dp"
+                    tools:layout_editor_absoluteY="61dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/status"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/servises"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvOnlineVisit"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/online"
+            android:fontFamily="@font/danstevis"
+            android:padding="14dp"
+            android:text="@string/online_visit"
+            android:textAllCaps="false"
+            android:textColor="#100D0D"
+            android:textSize="20sp"
+            app:backgroundTint="#c5e1a5"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvBooking"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/servises" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvBooking"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:drawableTop="@drawable/booking"
+            android:fontFamily="@font/danstevis"
+            android:padding="14dp"
+            android:text="@string/book_an_appointment"
+            android:textAllCaps="false"
+            android:textColor="#201717"
+            android:textSize="20sp"
+            app:backgroundTint="#bbdefb"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvOnlineVisit"
+            app:layout_constraintTop_toTopOf="@+id/tvOnlineVisit" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tcConsultation"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#ede7f6"
+            android:drawableTop="@drawable/home"
+            android:fontFamily="@font/danstevis"
+            android:padding="13dp"
+            android:text="@string/home_consultation"
+            android:textAllCaps="false"
+            android:textColor="#201717"
+            android:textSize="20sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvFavorites"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOnlineVisit" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvFavorites"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:backgroundTint="#ffcdd2"
+            android:drawableTop="@drawable/favorites"
+            android:fontFamily="@font/danstevis"
+            android:padding="15dp"
+            android:text="@string/favorites"
+            android:textColor="#201717"
+            android:textSize="20sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tcConsultation"
+            app:layout_constraintTop_toTopOf="@+id/tcConsultation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -3,4 +3,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="doctor">doctor</string>
+    <string name="status">status</string>
+    <string name="profession">profession</string>
+    <string name="phone">phone</string>
+    <string name="city">city</string>
+    <string name="name">name</string>
+    <string name="favorites">مورد علاقه ها</string>
+    <string name="home_consultation">مشاوره در منزل</string>
+    <string name="book_an_appointment">نوبت دهی</string>
+    <string name="online_visit">ویزیت آنلاین</string>
 </resources>
