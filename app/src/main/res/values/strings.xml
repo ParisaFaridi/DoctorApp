@@ -3,11 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="doctor">doctor</string>
-    <string name="status">status</string>
-    <string name="profession">profession</string>
-    <string name="phone">phone</string>
+    <string name="status">وضعیت</string>
+    <string name="profession">تخصص</string>
+    <string name="phone">تلفن</string>
     <string name="city">city</string>
-    <string name="name">name</string>
+    <string name="name">نام</string>
     <string name="favorites">مورد علاقه ها</string>
     <string name="home_consultation">مشاوره در منزل</string>
     <string name="book_an_appointment">نوبت دهی</string>
@@ -17,4 +17,10 @@
     <string name="chooseConsultancy">مدل مشاوره را انتخاب کنید:</string>
     <string name="_3000000">3000000</string>
     <string name="_30_minute">30 minute</string>
+    <string name="register_call">تماس دکتر با من</string>
+    <string name="submit">ثبت جواب ها</string>
+    <string name="question4">آیا تا به حال توسط این پزشک ویزیت شده اید؟</string>
+    <string name="question3">آیا شما بالای 18 سال سن دارید؟</string>
+    <string name="question2">آیا این تماس اورژانسی است؟</string>
+    <string name="question1">آیا هم اکنون آمادگی صحبت با دکتر را دارید؟</string>
 </resources>
