@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.doctorapp2.databinding.FragmentDoctorBinding
 
@@ -40,6 +41,9 @@ class DoctorFragment : Fragment() {
         }
         activity?.title = doctorViewModel.doctorList[id].name
 
+        binding.tvOnlineVisit.setOnClickListener {
+            findNavController().navigate(R.id.action_doctorFragment_to_onlineVisitFragment)
+        }
 
     }
 }
