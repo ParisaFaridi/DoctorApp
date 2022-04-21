@@ -1,6 +1,8 @@
-package com.example.doctorapp2
+package com.example.doctorapp2.viewModel
 
 import androidx.lifecycle.ViewModel
+import com.example.doctorapp2.Consultancy
+import com.example.doctorapp2.ConsultancyType
 
 class ConsultancyViewModel:ViewModel() {
 

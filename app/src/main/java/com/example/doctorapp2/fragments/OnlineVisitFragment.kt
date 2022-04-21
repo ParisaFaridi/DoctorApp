@@ -1,4 +1,4 @@
-package com.example.doctorapp2
+package com.example.doctorapp2.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,10 +10,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.doctorapp2.databinding.FragmentOnlineVisitBinding
+import com.example.doctorapp2.viewModel.ConsultancyViewModel
 
 class OnlineVisitFragment : Fragment() {
 
-    private val consultancyViewModel :ConsultancyViewModel by viewModels()
+    private val consultancyViewModel : ConsultancyViewModel by viewModels()
     private var _binding: FragmentOnlineVisitBinding? = null
     private val binding get() = _binding!!
 

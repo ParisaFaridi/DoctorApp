@@ -1,4 +1,4 @@
-package com.example.doctorapp2
+package com.example.doctorapp2.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

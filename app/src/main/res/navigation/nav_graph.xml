@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/doctorListFragment"
-        android:name="com.example.doctorapp2.DoctorListFragment"
+        android:name="com.example.doctorapp2.fragments.DoctorListFragment"
         android:label="fragment_doctor_list"
         tools:layout="@layout/fragment_doctor_list" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
-        android:name="com.example.doctorapp2.DoctorFragment"
+        android:name="com.example.doctorapp2.fragments.DoctorFragment"
         android:label="fragment_doctor"
         tools:layout="@layout/fragment_doctor" >
         <argument
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/onlineVisitFragment"
-        android:name="com.example.doctorapp2.OnlineVisitFragment"
+        android:name="com.example.doctorapp2.fragments.OnlineVisitFragment"
         android:label="fragment_online_visit"
         tools:layout="@layout/fragment_online_visit" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/userInfoFragment"
-        android:name="com.example.doctorapp2.UserInfoFragment"
+        android:name="com.example.doctorapp2.fragments.UserInfoFragment"
         android:label="fragment_user_info"
         tools:layout="@layout/fragment_user_info" >
         <argument
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/checkPatientFragment"
-        android:name="com.example.doctorapp2.CheckPatientFragment"
+        android:name="com.example.doctorapp2.fragments.CheckPatientFragment"
         android:label="fragment_check_patient"
         tools:layout="@layout/fragment_check_patient" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.doctorapp2
+package com.example.doctorapp2.fragments
 
 import android.content.Intent
 import android.net.Uri
@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.doctorapp2.viewModel.DoctorViewModel
+import com.example.doctorapp2.Status
 import com.example.doctorapp2.databinding.FragmentDoctorBinding
 
 class DoctorFragment : Fragment() {

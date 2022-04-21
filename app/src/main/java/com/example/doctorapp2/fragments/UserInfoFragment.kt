@@ -1,4 +1,4 @@
-package com.example.doctorapp2
+package com.example.doctorapp2.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.doctorapp2.R
 import com.example.doctorapp2.databinding.FragmentUserInfoBinding
 
 

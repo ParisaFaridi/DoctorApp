@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="30dp"
     android:gravity="center"
-    tools:context=".OnlineVisitFragment"
+    tools:context=".fragments.OnlineVisitFragment"
     android:orientation="vertical">
 
     <TextView
