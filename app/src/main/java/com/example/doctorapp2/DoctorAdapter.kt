@@ -4,13 +4,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class DoctorAdapter(private val dataSet: List<Doctor>) :
     RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val button: Button = view.findViewById(R.id.button)
+        val tvName: TextView = view.findViewById(R.id.tv_doc_name)
+        val tvId: TextView = view.findViewById(R.id.tv_doc_id)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
@@ -20,7 +22,8 @@ class DoctorAdapter(private val dataSet: List<Doctor>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.button.text = dataSet[position].name
+        holder.tvName.text = dataSet[position].name
+        holder.tvId.text = dataSet[position].id.toString()
     }
 
     override fun getItemCount() = dataSet.size
