@@ -18,10 +18,11 @@ class DoctorListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View {
+        savedInstanceState: Bundle?
+    ): View {
 
         _binding = FragmentDoctorListBinding.inflate(inflater, container, false)
-        return  binding.root
+        return binding.root
 
     }
 
@@ -29,6 +30,15 @@ class DoctorListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         activity?.title = "Doctor App"
+
+        val testData = listOf(
+            Doctor("امیر احسانی", 0, "تهران", "متخصص پوست", "44852347", Status.Online),
+            Doctor("محمد صادقیان", 1, "تهران", "ارتوپد", "66889925", Status.Online),
+            Doctor("زهرا حسینی", 2, "تهران", "روان پزشک", "22123456", Status.Offline)
+        )
+        val adapter = DoctorAdapter(testData)
+        binding.doctorRv.adapter = adapter
+        adapter.notifyDataSetChanged()
 
         doctorViewModel.testData()
         binding.btnDoc1.text =doctorViewModel.doctorList[0].name
@@ -41,8 +51,11 @@ class DoctorListFragment : Fragment() {
             btnDoc3.setOnClickListener {navigateToSecondFragment(2)}
         }
     }
-    private fun navigateToSecondFragment(id:Int){
-        findNavController().navigate(DoctorListFragmentDirections
-            .actionDoctorListFragmentToDoctorFragment(id))
+
+    private fun navigateToSecondFragment(id: Int) {
+        findNavController().navigate(
+            DoctorListFragmentDirections
+                .actionDoctorListFragmentToDoctorFragment(id)
+        )
     }
 }
