@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.doctorapp2.DoctorAdapter
-import com.example.doctorapp2.viewModel.DoctorViewModel
 import com.example.doctorapp2.databinding.FragmentDoctorListBinding
+import com.example.doctorapp2.viewModel.DoctorViewModel
 
 class DoctorListFragment : Fragment() {
 
@@ -33,25 +34,17 @@ class DoctorListFragment : Fragment() {
         activity?.title = "Doctor App"
 
         doctorViewModel.testData()
-        val adapter = DoctorAdapter(doctorViewModel.doctorList)
-        binding.doctorRv.adapter = adapter
-        adapter.notifyDataSetChanged()
 
-//        binding.btnDoc1.text =doctorViewModel.doctorList[0].name
-//        binding.btnDoc2.text =doctorViewModel.doctorList[1].name
-//        binding.btnDoc3.text =doctorViewModel.doctorList[2].name
-//
-//        binding.apply {
-//            btnDoc1.setOnClickListener {navigateToSecondFragment(0)}
-//            btnDoc2.setOnClickListener {navigateToSecondFragment(1)}
-//            btnDoc3.setOnClickListener {navigateToSecondFragment(2)}
-//        }
+        val adapter = DoctorAdapter {
+            navigateToSecondFragment(it) }
+        binding.doctorRv.adapter = adapter
+        adapter.submitList(doctorViewModel.doctorList)
     }
 
-//    private fun navigateToSecondFragment(id: Int) {
-//        findNavController().navigate(
-//            DoctorListFragmentDirections
-//                .actionDoctorListFragmentToDoctorFragment(id)
-//        )
-//    }
+    private fun navigateToSecondFragment(id: Int) {
+        findNavController().navigate(
+            DoctorListFragmentDirections
+                .actionDoctorListFragmentToDoctorFragment(id)
+        )
+    }
 }
