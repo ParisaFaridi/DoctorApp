@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.doctorapp2.DoctorAdapter
-import com.example.doctorapp2.databinding.FragmentDoctorListBinding
 import com.example.doctorapp2.viewModel.DoctorViewModel
+import com.example.doctorapp2.databinding.FragmentDoctorListBinding
 
 class DoctorListFragment : Fragment() {
 
@@ -35,9 +36,13 @@ class DoctorListFragment : Fragment() {
 
         doctorViewModel.testData()
 
-        val adapter = DoctorAdapter {
+        val adapter = DoctorAdapter(doctorViewModel.doctorList) {
             navigateToSecondFragment(it) }
         binding.doctorRv.adapter = adapter
+
+
+        //adapter.submitList(doctorViewModel.doctorList2)
+
         adapter.submitList(doctorViewModel.doctorList)
     }
 
